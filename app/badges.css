@@ -1,0 +1,22 @@
+.username-badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.badge {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.badge.verified {
+  filter: drop-shadow(0 0 4px rgba(0, 255, 170, 0.5));
+}
+
+.badge.premium {
+  filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.5));
+}
+

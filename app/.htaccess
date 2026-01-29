@@ -1,0 +1,18 @@
+Options -MultiViews
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# /u/<username> -> /u/index.php?user=<username>
+RewriteRule ^u/([A-Za-z0-9_]+)$ u/index.php?user=$1 [L,QSA]
+
+RewriteRule ^post/([0-9]+)/?$ post/index.php?id=$1 [L,QSA]
+
+# RewriteRule ^quiz/([0-9]+)/?$ quiz/view.php?id=$1 [L,QSA]
+
+# RewriteCond %{THE_REQUEST} \s/post/index\.php\?id=([0-9]+)\s [NC]
+# RewriteRule ^ post/%1? [R=301,L]

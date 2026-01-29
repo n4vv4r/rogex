@@ -1,0 +1,9 @@
+space/
+app/assets/uploads/
+assets/uploads/
+app/feedimgs/
+app/uploads/
+vendor/
+*.log
+.DS_Store
+.env
